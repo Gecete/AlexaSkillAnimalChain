@@ -1,0 +1,127 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "animal chain",
+            "intents": [
+                {
+                    "name": "Repeat",
+                    "slots": [],
+                    "samples": [
+                        "what animal did you say",
+                        "which animal did you say",
+                        "which was the last animal",
+                        "what was the animal",
+                        "repeat please",
+                        "repeat",
+                        "say the animal again",
+                        "say again",
+                        "can you repeat please"
+                    ]
+                },
+                {
+                    "name": "Next",
+                    "slots": [
+                        {
+                            "name": "word",
+                            "type": "AMAZON.Animal"
+                        }
+                    ],
+                    "samples": [
+                        "my animal is {word}",
+                        "{word}",
+                        "ok i say {word}",
+                        "then I say {word}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PauseIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ResumeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "Surrender",
+                    "slots": [],
+                    "samples": [
+                        "I dont know",
+                        "I dont know more",
+                        "I surrender",
+                        "I quit"
+                    ]
+                },
+                {
+                    "name": "Restart",
+                    "slots": [],
+                    "samples": [
+                        "start from the beginning",
+                        "play new game",
+                        "Please restart",
+                        "new game",
+                        "Start again",
+                        "Play again"
+                    ]
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": [
+                        "sure",
+                        "of couse",
+                        "ok",
+                        "yeap",
+                        "yeah"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": []
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "Next",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "word",
+                            "type": "AMAZON.Animal",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1530374058095.1268746791758"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.1530374058095.1268746791758",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "say an animal please"
+                    }
+                ]
+            }
+        ]
+    }
+}
